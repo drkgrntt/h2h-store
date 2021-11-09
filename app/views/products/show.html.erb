@@ -1,23 +1,15 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @product.title %>
-</p>
+<h2><%= @product.title %></h2>
 
 <p>
   <strong>Description:</strong>
   <%= @product.description %>
 </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @product.image %>
-</p>
+<%= image_tag(@product.image) %>
 
 <p>
   <strong>Price:</strong>
-  <%= @product.price %>
+  <%= price_as_currency(@product) %>
 </p>
 
 <p>

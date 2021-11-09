@@ -2,4 +2,13 @@
   height: var(--footer-height);
   background-color: var(--accent-color);
   color: var(--black);
+
+  ::selection {
+    background: var(--primary-color); /* WebKit/Blink Browsers */
+    color: var(--black);
+  }
+  ::-moz-selection {
+    background: var(--primary-color); /* Gecko Browsers */
+    color: var(--black);
+  }
 }

@@ -4,6 +4,7 @@
 :root {
   // colors
   --white: #eee;
+  --grey: #888;
   --black: #333;
   --primary-color: #ffc0cb;
   --accent-color: #0fa;
@@ -39,6 +40,11 @@ body {
   color: var(--black);
 }
 
+h1 { font-size: var(--h1-size); }
+h2 { font-size: var(--h2-size); }
+h3 { font-size: var(--h3-size); }
+h1 { font-size: var(--h1-size); }
+
 a,
 a:visited {
   color: var(--white);
@@ -57,7 +63,10 @@ input[type="submit"] {
 
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="number"],
+textarea {
+  font-family: inherit;
   padding: calc(var(--gap) / 2);
   font-size: 1rem;
 }

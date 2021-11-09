@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_field :description %>
+    <%= form.text_area :description %>
   </div>
 
   <div class="field">
@@ -28,7 +28,11 @@
 
   <div class="field">
     <%= form.label :price %>
-    <%= form.number_field :price %>
+    <%= 
+      form.number_field :price,
+        :step => 0.01,
+        :value => number_with_precision(@product.price / 100.0, :precision => 2)
+    %>
   </div>
 
   <div class="field">

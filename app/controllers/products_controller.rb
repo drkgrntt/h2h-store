@@ -36,8 +36,10 @@ class ProductsController < ApplicationController
 
   # PATCH/PUT /products/1 or /products/1.json
   def update
+    updated_product = product_params
+
     respond_to do |format|
-      if @product.update(product_params)
+      if @product.update(updated_product)
         format.html { redirect_to @product, notice: "Product was successfully updated." }
         format.json { render :show, status: :ok, location: @product }
       else
@@ -64,6 +66,7 @@ class ProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def product_params
+      params[:product][:price] = params[:product][:price].to_f * 100
       params.require(:product).permit(:title, :description, :image, :price, :quantity_available, :can_be_made_to_order)
     end
 end
