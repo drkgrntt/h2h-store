@@ -17,6 +17,8 @@
 
   // spacing
   --gap: 1rem;
+  --header-height: calc(var(--gap) * 20);
+  --footer-height: calc(var(--gap) * 3);
 }
 
 body {
@@ -61,5 +63,5 @@ input[type="password"] {
 }
 
 .main {
-  min-height: calc(100vh - calc(var(--gap) * 3) - calc(var(--gap) * 20));
+  min-height: calc(100vh - var(--footer-height) - var(--header-height));
 }

@@ -1,0 +1,5 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "bung87.rails",
+  "solargraph.autoformat": true
+}
