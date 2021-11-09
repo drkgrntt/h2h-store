@@ -1,3 +1,35 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+// index
+#products {
+  max-width: 100rem;
+  padding: 1rem 2rem;
+
+  .products {
+    &__table {
+      width: 100%;
+    }
+  }
+
+  .product {
+    &__detail {
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    &__image {
+      max-width: 5rem;
+    }
+  }
+}
+
+// show
+#product {
+
+}
+
+#product-form {
+
+}

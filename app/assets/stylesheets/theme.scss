@@ -7,7 +7,7 @@
   --grey: #888;
   --black: #333;
   --primary-color: #ffc0cb;
-  --accent-color: #0fa;
+  --accent-color: #afd;
 
   // fonts
   --primary-font: "Montserrat", sans-serif;
@@ -31,6 +31,7 @@ body {
   position: relative;
 }
 
+// Cursor Selection
 ::selection {
   background: var(--accent-color); /* WebKit/Blink Browsers */
   color: var(--black);
@@ -38,6 +39,18 @@ body {
 ::-moz-selection {
   background: var(--accent-color); /* Gecko Browsers */
   color: var(--black);
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: var(--black); 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color); 
+  border-radius: 1000rem;
 }
 
 h1 { font-size: var(--h1-size); }
