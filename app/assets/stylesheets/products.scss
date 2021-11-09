@@ -27,9 +27,30 @@
 
 // show
 #product {
-
+  max-width: 100rem;
+  padding: 1rem 2rem;
 }
 
-#product-form {
+// new
+#product-new {
+  max-width: 100rem;
+  padding: 1rem 2rem;
+}
 
+// edit
+#product-edit {
+  max-width: 100rem;
+  padding: 1rem 2rem;
+}
+
+// form partial
+#product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .field {
+    display: flex;
+    flex-direction: column;
+  }
 }
