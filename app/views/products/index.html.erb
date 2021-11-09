@@ -18,12 +18,12 @@
     <tbody>
       <% @products.each do |product| %>
         <tr class="product">
-          <td class="product__detail"><%= image_tag(product.image, :class => "product__image") %></td>
-          <td class="product__detail"><%= link_to product.title, product %></td>
+          <td class="product__detail product__detail--image"><%= image_tag(product.image, :class => "product__image") %></td>
+          <td class="product__detail product__detail--title"><%= link_to product.title, product, :class => "product__title" %></td>
           <td class="product__detail"><%= price_as_currency(product) %></td>
-          <td class="product__detail"><%= product.quantity_available %></td>
+          <td class="product__detail product__detail--quantity"><%= product.quantity_available %></td>
           <td class="product__detail"><%= product.can_be_made_to_order ? 'yes' : 'no' %></td>
-          <td class="product__detail"><%= link_to 'Edit', edit_product_path(product) %></td>
+          <td class="product__detail product__detail--edit"><%= link_to 'Edit', edit_product_path(product) %></td>
           <td class="product__detail"><%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>

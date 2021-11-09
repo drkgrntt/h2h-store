@@ -4,43 +4,94 @@
 
 // index
 #products {
-  max-width: 100rem;
-  padding: 1rem 2rem;
+  max-width: var(--max-page-width);
+  padding: var(--gap) calc(var(--gap) * 2);
 
   .products {
     &__table {
       width: 100%;
+      margin-top: calc(var(--gap) * 2);
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        margin-bottom: calc(var(--gap) * 2);
+      }
+
+      @media only screen and (min-width: 550px) {
+        thead {
+          display: table-header-group;
+        }
+        td {
+          padding-bottom: calc(var(--gap) * 2);
+        }
+      }
     }
   }
 
   .product {
+    display: grid;
+    gap: var(--gap);
+    grid-template:
+      "a a a" auto
+      "b c d" auto
+      "e f g" auto / 1fr 1fr 1fr;
+    align-items: center;
+
     &__detail {
       text-align: center;
       vertical-align: middle;
+
+      &--title {
+        grid-area: a;
+      }
+
+      &--image {
+        grid-area: b;
+      }
+
+      &--quantity {
+        grid-area: f;
+      }
+
+      &--edit {
+        grid-area: d;
+      }
+    }
+
+    &__title {
     }
 
     &__image {
       max-width: 5rem;
     }
   }
+
+  @media only screen and (min-width: 550px) {
+    .product {
+      display: table-row;
+    }
+  }
 }
 
 // show
 #product {
-  max-width: 100rem;
-  padding: 1rem 2rem;
+  max-width: var(--max-page-width);
+  padding: var(--gap) calc(var(--gap) * 2);
 }
 
 // new
 #product-new {
-  max-width: 100rem;
-  padding: 1rem 2rem;
+  max-width: var(--max-page-width);
+  padding: var(--gap) calc(var(--gap) * 2);
 }
 
 // edit
 #product-edit {
-  max-width: 100rem;
-  padding: 1rem 2rem;
+  max-width: var(--max-page-width);
+  padding: var(--gap) calc(var(--gap) * 2);
 }
 
 // form partial

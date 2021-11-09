@@ -11,6 +11,7 @@
 
   // fonts
   --primary-font: "Montserrat", sans-serif;
+  --font-size: 1.5rem;
   --h1-size: 5rem;
   --h2-size: 4rem;
   --h3-size: 3rem;
@@ -20,6 +21,10 @@
   --gap: 1rem;
   --header-height: calc(var(--gap) * 20);
   --footer-height: calc(var(--gap) * 3);
+  --max-page-width: 100rem;
+
+  // media queries
+  --tablet: 550px;
 }
 
 body {
@@ -27,7 +32,7 @@ body {
   color: var(--white);
   background-color: var(--black);
   -webkit-appearance: none;
-  font-size: 1rem;
+  font-size: var(--font-size);
   position: relative;
 }
 
