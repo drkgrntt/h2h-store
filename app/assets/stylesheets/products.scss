@@ -39,25 +39,29 @@
     //   "b c d" auto
     //   "e f g" auto / 1fr 1fr 1fr;
     // align-items: center;
+    display: flex;
+    gap: var(--gap);
+    flex-wrap: wrap;
+    justify-content: center;
 
     &__detail {
       text-align: center;
       vertical-align: middle;
 
       &--title {
-        grid-area: a;
+        // grid-area: a;
       }
 
       &--image {
-        grid-area: b;
+        // grid-area: b;
       }
 
       &--quantity {
-        grid-area: f;
+        // grid-area: f;
       }
 
       &--edit {
-        grid-area: d;
+        // grid-area: d;
       }
     }
 
