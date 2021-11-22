@@ -1,26 +1,43 @@
-<h2><%= @product.title %></h2>
+<div id="product">
+  <h2><%= @product.title %></h2>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+  <div class="actions">
+    <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Back', products_path %>
+  </div>
 
-<%= image_tag(@product.image) %>
+  <div class="product">
+    <div class="product__image">
+      <a target="_blank" href="<%= @product.image %>">
+        <%= image_tag(@product.image) %>
+      </a>
+    </div>
 
-<p>
-  <strong>Price:</strong>
-  <%= price_as_currency(@product) %>
-</p>
+    <div class="product__info">
+      <div class="product__detail">
+        <strong>Description:</strong>
+        <%= @product.description %>
+      </div class="product__detail">
 
-<p>
-  <strong>Quantity available:</strong>
-  <%= @product.quantity_available %>
-</p>
+      <div class="product__detail">
+        <strong>Price:</strong>
+        <%= price_as_currency(@product) %>
+      </div class="product__detail">
 
-<p>
-  <strong>Can be made to order:</strong>
-  <%= @product.can_be_made_to_order %>
-</p>
+      <div class="product__detail">
+        <strong>Quantity available:</strong>
+        <%= @product.quantity_available %>
+      </div class="product__detail">
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+      <div class="product__detail">
+        <strong>Can be made to order:</strong>
+        <%= @product.can_be_made_to_order %>
+      </div class="product__detail">
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Back', products_path %>
+  </div>
+</div>
