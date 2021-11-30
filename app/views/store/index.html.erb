@@ -1,0 +1,14 @@
+<div id="store">
+  <h2>Store</h2>
+
+  <div class="products">
+    <% @products.each do |product| %>
+      <div class="product">
+        <h3 class="product__title"><%= link_to product.title, "./#{product.id}" %></h3>
+        <%= image_tag(product.image, :class => "product__image") %>
+      </div>
+    <% end %>
+
+    <%= will_paginate @products %>
+  </div>
+</div>

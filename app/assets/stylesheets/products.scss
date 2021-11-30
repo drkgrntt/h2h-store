@@ -6,6 +6,7 @@
 #products {
   max-width: var(--max-page-width);
   padding: var(--gap) calc(var(--gap) * 2);
+  margin: 0 auto;
 
   .products {
     &__table {
@@ -73,6 +74,7 @@
 #product {
   max-width: var(--max-page-width);
   padding: var(--gap) calc(var(--gap) * 2);
+  margin: 0 auto;
 
   display: flex;
   flex-direction: column;
@@ -115,19 +117,21 @@
 #product-new {
   max-width: var(--max-page-width);
   padding: var(--gap) calc(var(--gap) * 2);
+  margin: 0 auto;
 }
 
 // edit
 #product-edit {
   max-width: var(--max-page-width);
   padding: var(--gap) calc(var(--gap) * 2);
+  margin: 0 auto;
 }
 
 // form partial
 #product-form {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: calc(var(--gap) * 2);
 
   .field {
     display: flex;
